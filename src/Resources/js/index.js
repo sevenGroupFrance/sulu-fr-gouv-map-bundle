@@ -1,4 +1,4 @@
 import { fieldRegistry } from 'sulu-admin-bundle/containers'
-import Adresse from './Components/Adresse/Adresse';
+import Adresse from './components/Adresse/Adresse';
 
 fieldRegistry.add('adresse', Adresse);

@@ -1,0 +1,7 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+    adresse:
+        class: SevenGroupFrance\SuluFrGouvMapBundle\Content\Types\Adresse
+        tags: [{ name: "sulu.content.type", alias: "adresse" }]

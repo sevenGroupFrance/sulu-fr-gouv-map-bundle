@@ -4,7 +4,7 @@ Inspired by [this pull request](https://github.com/sulu/sulu-demo/pull/66).
 
 ## What is this bundle's goal?
 
-To create a new content type `adresse` which is a single text input with autocomplete. It only searches through french addresses\
+To create a new content type `adresse` which is a single text input with autocomplete. It only searches through french addresses
 since it uses the [data gouv API](https://adresse.data.gouv.fr/api-doc/adresse).
 
 ## Installation

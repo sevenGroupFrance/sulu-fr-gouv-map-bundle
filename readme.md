@@ -13,7 +13,7 @@ since it uses the [data gouv API](https://adresse.data.gouv.fr/api-doc/adresse).
 2. In `config/bundles.php` add the following code:\
 `SevenGroupFrance\SuluFrGouvMapBundle\SuluFrGouvMapBundle::class => ['all' => true]`.
 3. In `assets/admin/package.json`, add the following line in the "dependencies" object:\
-`"sulu-icon-picker-bundle": "file:node_modules/@sulu/vendor/sevengroupfrance/sulu-fr-gouv-map-bundle/src/Resources/js"`.
+`"sulu-fr-gouv-map-bundle": "file:node_modules/@sulu/vendor/sevengroupfrance/sulu-fr-gouv-map-bundle/src/Resources/js"`.
 4. In `assets/admin`, `npm install` to initialize the bundle's symlink directory.
 5. In `assets/admin/index.js`, add this line:\
 `import 'sulu-fr-gouv-map-bundle'`.

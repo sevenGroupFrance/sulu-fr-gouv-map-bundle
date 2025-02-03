@@ -31,12 +31,17 @@ const Adresse = (props) => {
 
   const setDisplayMessage = async (value) => {
     setSpinner(true);
-    await fetch(`https://api-adresse.data.gouv.fr/search/?q=${value}&limit=10&autocomplete=1`)
-      .then(res => res.json())
-      .then(data => {
-        setSpinner(false);
-        setDatas(data.features);
-      });
+    if (value.length > 2) {
+      await fetch(`https://api-adresse.data.gouv.fr/search/?q=${value}&limit=10&autocomplete=1`)
+        .then(res => res.json())
+        .then(data => {
+          setSpinner(false);
+          setDatas(data.features);
+        });
+    } else {
+      setSpinner(false);
+      setDatas([]);
+    }
   }
 
   const handleBlur = () => {

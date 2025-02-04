@@ -14,7 +14,7 @@ const Adresse = (props) => {
   const [spinner, setSpinner] = useState(false);
 
   useEffect(() => {
-    if (value.length > 0) {
+    if (value && value.length > 0) {
       const timeOutId = setTimeout(() => setDisplayMessage(value), 1000);
       return () => clearTimeout(timeOutId);
     }
@@ -31,7 +31,7 @@ const Adresse = (props) => {
 
   const setDisplayMessage = async (value) => {
     setSpinner(true);
-    if (value.length > 2) {
+    if (value && value.length > 2) {
       await fetch(`https://api-adresse.data.gouv.fr/search/?q=${value}&limit=10&autocomplete=1`)
         .then(res => res.json())
         .then(data => {
@@ -76,7 +76,7 @@ const Adresse = (props) => {
           onFocus={handleFocus}
         />
         {
-          datas.length > 0 && focus &&
+          datas && datas.length > 0 && focus &&
           <Screen
             datas={datas}
             spinner={spinner}
